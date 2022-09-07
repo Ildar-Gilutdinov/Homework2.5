@@ -14,7 +14,7 @@ public class Main {
             System.out.println("3 - удалить товар");
             System.out.println("4 - поиск товара");
             System.out.println("введите end для завершения программы");
-
+            int sum = 0;
             String operation = scanner.nextLine(); // ввод операции
             if (("end").equals(operation)) {
                 System.out.println("Программа завершена!");
@@ -35,7 +35,7 @@ public class Main {
                     break;
                 }
                 case "3": {//удаление
-                    System.out.println("Какую покупку вы хотите удалить? Введите название");
+                    System.out.println("Какую покупку вы хотите удалить? Введите номер или название");
                     String productRemoval = scanner.nextLine(); // ввод удаляемого товара
                     Shopping.remove(productRemoval);
                     System.out.println("Покупка " + productRemoval + " удалена, список покупок:");
@@ -45,7 +45,7 @@ public class Main {
                 }
                 case "4": { //поиск
                     System.out.println("Введите текст для поиска");
-                    String searchText = scanner.nextLine(); // ввод доходов
+                    String searchText = scanner.nextLine(); // ввод искомого числа
                     for (String items : Shopping) {
                         items.toLowerCase();
                         searchText.toLowerCase();
