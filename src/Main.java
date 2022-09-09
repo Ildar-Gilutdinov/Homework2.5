@@ -7,6 +7,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Программа: список покупок");
         List<String> Shopping = new ArrayList<>();
+//        List<String> list = new ArrayList<>();
         while (true) {                             //цикл while
             System.out.println("Выберите операцию и введите её номер");
             System.out.println("1 - добавить товар");
@@ -45,10 +46,8 @@ public class Main {
                 }
                 case "4": { //поиск
                     System.out.println("Введите текст для поиска");
-                    String searchText = scanner.nextLine(); // ввод искомого числа
+                    String searchText = scanner.nextLine(); // ввод доходов
                     for (String items : Shopping) {
-                        items.toLowerCase();
-                        searchText.toLowerCase();
                         for (int i = 0; i < Shopping.size(); i++) {
                             if (Shopping.get(i).toLowerCase().contains(searchText.toLowerCase())) {
                                 System.out.println((i + 1) + ". " + Shopping.get(i));
